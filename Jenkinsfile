@@ -20,5 +20,17 @@ pipeline {
 				}
 			}
 		}
+		stage ('Build'){
+			steps {
+				script {
+					try {
+						sh './mvnw package -D skipTests'
+					}
+					catch (Exception e) {
+						echo 'Error while generating JAR file'
+					}
+				}
+			}
+		}
 	}	
 }
