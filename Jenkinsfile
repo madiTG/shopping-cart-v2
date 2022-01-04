@@ -10,7 +10,7 @@ pipeline {
 			parallel {
 				stage ('Unit Test') {
 					steps {
-						sh './mvn test -D testGroups=unit'
+						sh './mvnw test -D testGroups=unit'
 					}
 				}
 				stage ('Integration Tests') {
