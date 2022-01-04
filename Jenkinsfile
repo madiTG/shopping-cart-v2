@@ -10,12 +10,12 @@ pipeline {
 			parallel {
 				stage ('Unit Test') {
 					steps {
-						bash './mvn test -D testGroups=unit'
+						sh './mvn test -D testGroups=unit'
 					}
 				}
 				stage ('Integration Tests') {
 					steps {
-						bash './mvnw test -D testGroups=integration'
+						sh './mvnw test -D testGroups=integration'
 					}
 				}
 			}
