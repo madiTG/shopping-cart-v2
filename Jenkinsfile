@@ -4,7 +4,7 @@ pipeline {
 	}
 	
 	parameters {
-		booleanParam(name: "RUN_INTEGRATION_TESTS", defatultValue: true)
+		booleanParam(name: "RUN_INTEGRATION_TESTS", defaultValue: true)
 	}
 
 	stages {
